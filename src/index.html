@@ -2,65 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Auto Rotating Images with Stop Button</title>
-  <style>
-    .slider {
-      width: 400px;
-      height: 250px;
-      overflow: hidden;
-      position: relative;
-      margin-bottom: 10px;
-    }
-
-    .slides {
-      display: flex;
-      width: 400%;
-      animation: slide 20s infinite;
-    }
-
-    .slides img {
-      width: 100%;
-      height: auto;
-    }
-
-    @keyframes slide {
-      0%   { margin-left: 0%; }
-      25%  { margin-left: 0%; }
-      30%  { margin-left: -100%; }
-      55%  { margin-left: -100%; }
-      60%  { margin-left: -200%; }
-      85%  { margin-left: -200%; }
-      90%  { margin-left: -300%; }
-      100% { margin-left: -300%; }
-    }
-
-    .paused {
-      animation-play-state: paused;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playvia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-
-<div class="slider">
-  <div class="slides" id="slideShow">
-    <img src="image//logo.png" alt="Image 1">
-    <img src="image//logo.png" alt="Image 2">
-    <img src="image//logo.png" alt="Image 3">
-    <img src="image//logo.png" alt="Image 4">
+  <div class="top-bar">
+    
   </div>
-</div>
-
-<button onclick="toggleSlide()">Stop Rotation</button>
-
-<script>
-  let paused = false;
-  function toggleSlide() {
-    const slide = document.getElementById('slideShow');
-    paused = !paused;
-    slide.classList.toggle('paused', paused);
-    document.querySelector('button').textContent = paused ? 'Start Rotation' : 'Stop Rotation';
-  }
-</script>
-
 </body>
 </html>

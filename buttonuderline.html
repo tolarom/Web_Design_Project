@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Line Switch</title>
+  <style>
+    .button-group {
+      display: flex;
+      gap: 20px;
+      position: relative;
+      margin: 50px;
+    }
+
+    .btn {
+      background: none;
+      border: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .underline {
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      background: #3498db;
+      transition: left 0.3s ease, width 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="button-group" id="buttonGroup">
+    <button class="btn" onclick="moveLine(this)">Button 1</button>
+    <button class="btn" onclick="moveLine(this)">Button 2</button>
+    <div class="underline" id="underline"></div>
+  </div>
+
+  <script>
+    function moveLine(button) {
+      const underline = document.getElementById('underline');
+      const group = document.getElementById('buttonGroup');
+      const rect = button.getBoundingClientRect();
+      const groupRect = group.getBoundingClientRect();
+
+      underline.style.width = rect.width + 'px';
+      underline.style.left = (rect.left - groupRect.left) + 'px';
+    }
+
+    // Optional: Set default underline
+    window.onload = () => {
+      moveLine(document.querySelector('.btn'));
+    };
+  </script>
+
+</body>
+</html>
