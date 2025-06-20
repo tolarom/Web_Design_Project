@@ -1,15 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playvia</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playvia - Gaming Electronics Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="top-bar">
-    
-  </div>
+    <div class="overflow-hidden pb-44 bg-white max-md:pb-24">
+        <!-- Header Navigation -->
+        <header class="flex flex-col justify-center items-center px-16 py-5 w-full bg-white max-md:px-5 max-md:max-w-full">
+            <nav class="flex gap-5 justify-between items-center w-full max-w-[1212px] max-md:max-w-full">
+                <!-- Logo and Navigation Links -->
+                <div class="flex gap-10 items-center self-stretch my-auto text-xl font-medium text-black max-md:max-w-full">
+                    <div class="grow self-stretch text-4xl text-stone-900">
+                        Playvia
+                    </div>
+                    <a href="#" class="self-stretch my-auto hover:text-gray-600 transition-colors">
+                        Home
+                    </a>
+                    <a href="#" class="self-stretch my-auto hover:text-gray-600 transition-colors">
+                        Shop
+                    </a>
+                    <a href="#" class="self-stretch my-auto hover:text-gray-600 transition-colors">
+                        Brands
+                    </a>
+                    <a href="#" class="self-stretch my-auto hover:text-gray-600 transition-colors">
+                        Support
+                    </a>
+                    <a href="#" class="self-stretch my-auto hover:text-gray-600 transition-colors">
+                        About Us
+                    </a>
+                </div>
+
+                <!-- Search Section -->
+                <div class="flex gap-1 self-stretch my-auto text-xl font-medium text-black whitespace-nowrap">
+                    <input type="text" placeholder="Search" class="grow border-none outline-none bg-transparent" id="searchInput">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/448f43df596301c8cf70d566f00db3da0e3e5bb5?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[30px] cursor-pointer" alt="Search icon" onclick="performSearch()">
+                </div>
+
+                <!-- User Actions -->
+                <div class="flex gap-10 self-stretch">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cdad125d772e016eb791453088c6421cdb46f10?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 my-auto w-10 aspect-square cursor-pointer" alt="User account" onclick="toggleUserMenu()">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab0c63d7033ea368662c8b3e2568b4b5472b06af?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[50px] cursor-pointer" alt="Shopping cart" onclick="toggleCart()">
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="flex relative flex-col justify-center px-16 py-32 mt-6 w-full min-h-[765px] max-md:py-24 max-md:pl-5 max-md:max-w-full">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c921bbc07729cb4bb442a82f6107c05b1e7f5e28?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-cover absolute inset-0 size-full" alt="Hero background">
+            <div class="relative mb-0 max-md:mb-2.5 max-md:max-w-full">
+                <div class="flex gap-5 max-md:flex-col">
+                    <!-- Hero Content -->
+                    <div class="w-6/12 max-md:ml-0 max-md:w-full">
+                        <div class="flex relative flex-col grow mt-12 text-4xl text-black max-md:mt-10 max-md:max-w-full">
+                            <h1 class="text-6xl max-md:max-w-full max-md:text-4xl">
+                                Xbox Wireless Controller + USB-C® Cable
+                            </h1>
+                            <p class="text-white max-md:mr-2.5 max-md:max-w-full">
+                                Experience the modernized design of the Xbox Wireless Controller, featuring sculpted surfaces and refined geometry for enhanced comfort during gameplay.
+                            </p>
+                            <button class="self-start px-1.5 pt-4 pb-10 mt-14 bg-green-500 hover:bg-green-600 transition-colors cursor-pointer max-md:mt-10" onclick="learnMore()">
+                                Learn More &gt;
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Hero Image -->
+                    <div class="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d406b7e3bcae366e9d200328aae5beb9a5dc8ae2?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain grow w-full aspect-[1.19] max-md:mt-10 max-md:max-w-full" alt="Xbox Wireless Controller">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="flex flex-col px-20 mt-11 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
+            <!-- Top Sale Section -->
+            <section class="mb-20">
+                <h2 class="self-start text-4xl font-semibold text-stone-900">
+                    Top Sale
+                </h2>
+                <div class="self-center mt-11 w-full max-w-[1205px] max-md:mt-10 max-md:max-w-full justify-self-center">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <!-- Product 1 -->
+                        <article class="w-[33%] max-md:ml-0 max-md:w-full">
+                            <div class="grow text-3xl font-semibold text-black max-md:mt-10 cursor-pointer hover:opacity-80 transition-opacity" onclick="viewProduct('xbox-controller')">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/258c105fedb327bb7593f3055597215f0a9e7db3?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-full aspect-[1.41]" alt="Xbox Wireless Controller">
+                                <div class="flex flex-col items-start pr-14 pl-2.5 mt-3.5 max-md:pr-5">
+                                    <h3>
+                                        Xbox Wireless <br>
+                                        Controller
+                                    </h3>
+                                    <p class="mt-10">
+                                        $64.99
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Product 2 -->
+                        <article class="ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+                            <div class="grow text-3xl font-semibold text-black whitespace-nowrap max-md:mt-10 cursor-pointer hover:opacity-80 transition-opacity" onclick="viewProduct('playstation5')">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/691093d794b41adbf7de2509a4c34321c17b7f70?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-full aspect-[1.41]" alt="PlayStation 5">
+                                <div class="flex flex-col items-start pr-14 pl-2.5 mt-3.5 max-md:pr-5">
+                                    <h3>PlayStation®5</h3>
+                                    <p class="mt-20 max-md:mt-10">
+                                        $499.99
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Product 3 -->
+                        <article class="ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+                            <div class="flex flex-col grow text-3xl font-semibold text-black max-md:mt-10 cursor-pointer hover:opacity-80 transition-opacity" onclick="viewProduct('asus-mouse')">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/70fe7890f6b5d18438efa3ce3a7ae61908272289?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain self-end max-w-full aspect-[1.03] w-[227px]" alt="ASUS Fragrance Mouse MD101">
+                                <h3>
+                                    ASUS Fragrance <br>
+                                    Mouse MD101
+                                </h3>
+                                <p class="self-start mt-10">
+                                    $49.99
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Highlighted Product Section -->
+            <section class="mb-20">
+                <h2 class="self-start mt-20 text-4xl font-semibold text-stone-900 max-md:mt-10 max-md:ml-1.5">
+                    Highlighted Product
+                </h2>
+                <div class="self-center mt-16 w-full max-w-[1245px] max-md:mt-10 max-md:max-w-full justify-self-center">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <!-- Product 1 -->
+                        <article class="w-[33%] max-md:ml-0 max-md:w-full">
+                            <div class="grow text-3xl font-semibold text-black max-md:mt-10 cursor-pointer hover:opacity-80 transition-opacity" onclick="viewProduct('xbox-controller-highlighted')">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/258c105fedb327bb7593f3055597215f0a9e7db3?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-full aspect-[1.41]" alt="Xbox Wireless Controller">
+                                <div class="flex flex-col items-start pr-14 pl-2.5 mt-3.5 max-md:pr-5">
+                                    <h3>
+                                        Xbox Wireless <br>
+                                        Controller
+                                    </h3>
+                                    <p class="mt-10">
+                                        $64.99
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <!-- Product 2 -->
+                        <article class="ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+                            <div class="grow text-3xl font-semibold text-black whitespace-nowrap max-md:mt-10 cursor-pointer hover:opacity-80 transition-opacity" onclick="viewProduct('playstation5-highlighted')">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/691093d794b41adbf7de2509a4c34321c17b7f70?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-full aspect-[1.41]" alt="PlayStation 5">
+                                <div class="flex flex-col items-start pr-14 pl-2.5 mt-3.5 max-md:pr-5">
+                                    <h3>PlayStation®5</h3>
+                                    <p class="mt-20 max-md:mt-10">
+                                        $499.99
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Product 3 -->
+                        <article class="ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+                            <div class="grow text-3xl font-semibold text-black max-md:mt-10 cursor-pointer hover:opacity-80 transition-opacity" onclick="viewProduct('razer-keyboard')">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/328134a02ca593cfb490113c2242551512ae1015?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-full aspect-[1.41] max-md:mr-2" alt="Razer BlackWidow V4 Pro 75%">
+                                <div class="flex flex-col pl-2.5 mt-3.5">
+                                    <h3>
+                                        Razer BlackWidow V4 Pro 75%
+                                        <br>
+                                    </h3>
+                                    <p class="self-start">
+                                        $299.99
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Best Feature Section -->
+            <section class="mb-20">
+                <h2 class="self-start mt-20 text-4xl font-semibold text-stone-900 max-md:mt-10">
+                    Best Feature
+                </h2>
+                <div class="self-center mt-12 w-full max-w-[1228px] max-md:mt-10 max-md:max-w-full justify-self-center">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <!-- Product 1 -->
+                        <article class="w-[33%] max-md:ml-0 max-md:w-full">
+                            <div class="flex flex-col grow mt-1.5 text-3xl font-semibold text-black max-md:mt-10 cursor-pointer hover:opacity-80 transition-opacity" onclick="viewProduct('xbox-controller-cable')">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e3c5917e5c00e6765c94d6b51073da754bfe0830?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-full aspect-[1.19] max-md:ml-2" alt="Xbox Wireless Controller + USB-C Cable">
+                                <h3>
+                                    Xbox Wireless <br>
+                                    Controller + <br>
+                                    USB-C® Cable
+                                </h3>
+                                <p class="self-start">
+                                    $64.99
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Product 2 -->
+                        <article class="ml-5 w-[30%] max-md:ml-0 max-md:w-full">
+                            <div class="flex flex-col grow items-start mt-1.5 text-3xl font-semibold text-black max-md:mt-10 cursor-pointer hover:opacity-80 transition-opacity" onclick="viewProduct('razer-basilisk')">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e4acadb6c86e769131975e5082db7269f3dcceab?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain ml-3.5 w-full aspect-[1.1] max-md:ml-2.5" alt="Razer Basilisk V3 Pro 35K">
+                                <h3 class="self-stretch">
+                                    Razer Basilisk V3 <br>
+                                    Pro 35K
+                                </h3>
+                                <p class="mt-10">
+                                    $159.99
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Product 3 -->
+                        <article class="ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+                            <div class="grow text-3xl font-semibold text-black max-md:mt-10 cursor-pointer hover:opacity-80 transition-opacity" onclick="viewProduct('razer-barracuda')">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/93fcead15791852bb34fadd8122f23a6d8342405?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-full aspect-[1.41]" alt="Razer Barracuda Pro">
+                                <div class="flex flex-col items-start pr-11 pl-2.5 mt-3.5 max-md:pr-5">
+                                    <h3>Razer Barracuda Pro</h3>
+                                    <p class="mt-10">
+                                        $249.99
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Separator -->
+        <div class="w-full border-black border-solid border-[5px] min-h-[7px] mt-[689px] max-md:mt-10 max-md:max-w-full"></div>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-[1198px] max-md:max-w-full mx-auto px-4">
+            <div class="flex gap-5 max-md:flex-col">
+                <!-- Company Info Section -->
+                <div class="w-[59%] max-md:ml-0 max-md:w-full">
+                    <div class="grow max-md:mt-10 max-md:max-w-full">
+                        <div class="flex gap-5 max-md:flex-col">
+                            <!-- Logo -->
+                            <div class="w-[66%] max-md:ml-0 max-md:w-full">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c255a6b7113439e99cdd02e042796819bea62a8?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain grow w-full aspect-[1.75] max-md:mt-10" alt="Playvia logo">
+                            </div>
+                            <!-- Information -->
+                            <div class="ml-5 w-[34%] max-md:ml-0 max-md:w-full">
+                                <div class="flex flex-col self-stretch my-auto font-semibold text-black max-md:mt-10">
+                                    <h3 class="self-start text-2xl">
+                                        Information
+                                    </h3>
+                                    <div class="mt-6 text-xl">
+                                        <a href="#" class="block hover:text-gray-600 transition-colors">-About Us</a>
+                                        <a href="https://maps.app.goo.gl/hvTkZxwAXDn5FSGJ9" target="_blank" class="block hover:text-gray-600 transition-colors">-Contact & Address</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact and Social Section -->
+                <div class="ml-5 w-[41%] max-md:ml-0 max-md:w-full">
+                    <div class="flex gap-10 self-stretch my-auto max-md:mt-10">
+                        <!-- Contact Info -->
+                        <div class="flex flex-col font-semibold text-black">
+                            <h3 class="self-start text-2xl">
+                                Contact
+                            </h3>
+                            <div class="mt-6 text-xl">
+                                <a href="tel:011759486" class="block hover:text-gray-600 transition-colors">-Phone Number</a>
+                                <a href="mailto:tolarom27@gmail.com" class="block hover:text-gray-600 transition-colors">-Email</a>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="flex flex-col self-start">
+                            <h3 class="text-2xl font-semibold text-black">
+                                Follow Us
+                            </h3>
+                            <div class="flex gap-5 self-end mt-4 max-md:mr-1.5">
+                                <a href="https://www.facebook.com/nachooloveu/" target="_blank" class="hover:opacity-70 transition-opacity">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2e0e44bf8c9a9c5deed4be334a8a526eee7a2c84?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[30px]" alt="Social media">
+                                </a>
+                                <a href="https://www.instagram.com/nachooloveu/" target="_blank" class="hover:opacity-70 transition-opacity">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/253c085ab80620631c8c8db041870e09ad0e6531?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[30px]" alt="Social media">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,199 @@
+/* Additional styles for enhanced functionality */
+
+/* Loading and error states for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img:not(.loaded) {
+    opacity: 0.7;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+img.error {
+    opacity: 0.5;
+    background-color: #f3f4f6;
+}
+
+/* Smooth animations */
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus,
+input:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Mobile menu animations */
+#mobileMenu {
+    transition: opacity 0.3s ease;
+}
+
+#mobileMenu.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#mobileMenu:not(.hidden) {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Header shadow transition */
+header {
+    transition: box-shadow 0.3s ease;
+}
+
+/* Product card hover effects */
+article {
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive text adjustments */
+@media (max-width: 768px) {
+    .text-6xl {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .text-4xl {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .text-3xl {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+}
+
+/* Loading spinner for dynamic content */
+.loading-spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Button hover effects */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search input enhancements */
+#searchInput {
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-bottom: 1px solid #3b82f6;
+}
+
+/* Footer link hover effects */
+footer a {
+    transition: color 0.3s ease;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .text-white {
+        color: #ffffff !important;
+    }
+
+    .text-black {
+        color: #000000 !important;
+    }
+
+    .bg-green-500 {
+        background-color: #22c55e !important;
+        border: 2px solid #000000;
+    }
+}
+
+/* Print styles */
+@media print {
+    header,
+    footer,
+    #mobileMenu {
+        display: none;
+    }
+
+    .bg-green-500 {
+        background-color: #22c55e !important;
+        -webkit-print-color-adjust: exact;
+    }
+}
+  
