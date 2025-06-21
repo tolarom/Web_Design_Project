@@ -5,7 +5,7 @@
         <header class="flex flex-col justify-center items-center px-16 py-5 w-full bg-white max-md:px-5 max-md:max-w-full">
             <nav class="flex gap-5 justify-between items-center w-full max-w-[1212px] max-md:max-w-full">
                 <!-- Logo and Navigation Links -->
-                <div class="flex gap-10 items-center self-stretch my-auto text-xl font-medium text-black max-md:max-w-full">
+                <div class="flex gap-20 items-center self-stretch my-auto text-xl font-medium text-black max-md:max-w-full">
                     <div class="grow self-stretch text-4xl text-stone-900">
                         Playvia
                     </div>
@@ -15,23 +15,26 @@
                     <a href="#" onclick="loadPage('store')" class="self-stretch my-auto hover:text-gray-600 transition-colors">
                         Shop
                     </a>
-                    <a href="#" class="self-stretch my-auto hover:text-gray-600 transition-colors">
+                    <a href="#" onclick="loadPage('brands')" class="self-stretch my-auto hover:text-gray-600 transition-colors">
                         Brands
                     </a>
-                    <a href="#" class="self-stretch my-auto hover:text-gray-600 transition-colors">
+                    <a href="#" onclick="loadPage('aboutUs')" class="self-stretch my-auto hover:text-gray-600 transition-colors">
                         About Us
                     </a>
                 </div>
 
                 <!-- Search Section -->
                 <div class="flex gap-1 self-stretch my-auto text-xl font-medium text-black whitespace-nowrap">
-                    <input type="text" placeholder="Search" class="grow border-2 bg-transparent" id="searchInput">
+                    <input type="text" placeholder="Search here..." class="grow border-2 rounded-lg bg-transparent" id="searchInput">
                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/448f43df596301c8cf70d566f00db3da0e3e5bb5?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[30px] cursor-pointer" alt="Search icon" onclick="performSearch()">
                 </div>
 
                 <!-- User Actions -->
                 <div class="flex gap-10 self-stretch">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cdad125d772e016eb791453088c6421cdb46f10?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 my-auto w-10 aspect-square cursor-pointer" alt="User account" onclick="toggleUserMenu()">
+                    <a href="#" onclick="loadPage('product')" class="relative text-[#517907] hover:text-black-700 transition-colors m-9">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cdad125d772e016eb791453088c6421cdb46f10?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 my-auto w-10 aspect-square cursor-pointer" alt="User account">
+                        <span id="cart-item-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </a>
                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab0c63d7033ea368662c8b3e2568b4b5472b06af?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[50px] cursor-pointer" alt="Shopping cart" onclick="toggleCart()">
                 </div>
             </nav>

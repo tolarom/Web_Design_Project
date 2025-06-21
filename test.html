@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    nav a {
+      text-decoration: none;
+      color: blue;
+      padding: 10px;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a.active {
+      border-bottom: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" id="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <script>
+    const links = document.querySelectorAll("nav a");
+
+    links.forEach(link => {
+      link.addEventListener("click", function(e) {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
