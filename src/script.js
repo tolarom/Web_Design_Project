@@ -1,3 +1,20 @@
+  // Load layout (nav + footer) once
+  fetch('layout.html')
+    .then(res => res.text())
+    .then(layout => {
+      document.getElementById('layout').innerHTML = layout;
+      loadPage('home'); // default to home
+    });
+
+  // Function to load only body content
+  function loadPage(page) {
+    fetch(`${page}.html`)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('main-body').innerHTML = html;
+      });
+  }
+
 // Search functionality
 function performSearch() {
     const searchInput = document.getElementById('searchInput');
@@ -42,28 +59,6 @@ function learnMore() {
     // In a real application, this would navigate to a product details page
     alert('Learn More clicked - would show Xbox controller details');
     // window.location.href = '/products/xbox-wireless-controller';
-}
-
-// Mobile menu functionality
-function openMobileMenu() {
-    document.getElementById('mobileMenu').classList.remove('hidden');
-}
-
-function closeMobileMenu() {
-    document.getElementById('mobileMenu').classList.add('hidden');
-}
-
-// Add mobile menu trigger for smaller screens
-function initializeMobileMenu() {
-    // Add a hamburger menu button for mobile screens
-    const nav = document.querySelector('nav');
-    const mobileMenuButton = document.createElement('button');
-    mobileMenuButton.innerHTML = '☰';
-    mobileMenuButton.className = 'md:hidden text-2xl';
-    mobileMenuButton.onclick = openMobileMenu;
-
-    // Insert the mobile menu button
-    nav.appendChild(mobileMenuButton);
 }
 
 // Smooth scrolling for anchor links
@@ -126,3 +121,8 @@ const observer = new IntersectionObserver(function(entries) {
 document.querySelectorAll('article').forEach(article => {
     observer.observe(article);
 });
+
+function querySelector(selector) {
+    return document.querySelector(selector);
+}
+

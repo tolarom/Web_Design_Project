@@ -70,21 +70,6 @@ input:focus {
     outline-offset: 2px;
 }
 
-/* Mobile menu animations */
-#mobileMenu {
-    transition: opacity 0.3s ease;
-}
-
-#mobileMenu.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-#mobileMenu:not(.hidden) {
-    opacity: 1;
-    pointer-events: all;
-}
-
 /* Header shadow transition */
 header {
     transition: box-shadow 0.3s ease;
