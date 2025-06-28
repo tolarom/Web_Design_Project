@@ -136,7 +136,27 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         window.addToCart(product);
         // You could add a more sophisticated notification here instead of an alert
-        alert(`${product.name} has been added to your cart!`);
+        const alert = document.createElement('div');
+        alert.textContent = 'Added to cart!';
+        alert.style.position = 'fixed';
+        alert.style.top = '1.5rem';
+        alert.style.right = '1.5rem';
+        alert.style.background = '#38a169';
+        alert.style.color = '#fff';
+        alert.style.padding = '0.75rem 1.5rem';
+        alert.style.borderRadius = '0.5rem';
+        alert.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+        alert.style.fontSize = '1rem';
+        alert.style.zIndex = '9999';
+        alert.style.opacity = '0';
+        alert.style.transition = 'opacity 0.3s';
+
+        document.body.appendChild(alert);
+        setTimeout(() => { alert.style.opacity = '1'; }, 10);
+        setTimeout(() => {
+            alert.style.opacity = '0';
+            setTimeout(() => alert.remove(), 300);
+        }, 1800);
     };
 
     // --- Event Listeners ---
