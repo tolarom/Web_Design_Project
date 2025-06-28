@@ -8,165 +8,162 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
+<body class="bg-white">
 
   <div class="overflow-hidden pb-44 bg-white max-md:pb-24">
     <!-- Header Navigation -->
-    <header class="flex flex-col justify-center items-center px-16 py-5 w-full bg-white max-md:px-5 max-md:max-w-full">
-        <nav class="flex gap-5 justify-between items-center w-full max-w-[1212px] max-md:max-w-full">
-            <!-- Logo and Navigation Links -->
-            <div class="flex gap-20 items-center self-stretch my-auto text-xl font-medium text-black max-md:max-w-full">
-                <div class="grow self-stretch text-4xl text-stone-900">
-                    Playvia
-                </div>
-                <a href="index.html" class="self-stretch my-auto hover:text-gray-600 transition-colors">
-                    Home
-                </a>
-                <a href="store.html" class="self-stretch my-auto hover:text-gray-600 transition-colors">
-                    Shop
-                </a>
-                <a href="brands.html" class="self-stretch my-auto hover:text-gray-600 transition-colors">
-                    Brands
-                </a>
-                <a href="aboutUs.html" class="self-stretch my-auto hover:text-gray-600 transition-colors">
-                    About Us
-                </a>
+    <header class="flex flex-col justify-center items-center px-4 py-5 w-full bg-white sticky top-0 z-30 shadow-sm max-md:px-2">
+      <nav class="flex gap-5 justify-between items-center w-full max-w-[1212px] max-md:max-w-full relative">
+        <!-- Logo -->
+        <div class="flex items-center text-2xl font-bold text-stone-900">
+          Playvia
+        </div>
+        <!-- Hamburger for mobile -->
+        <button class="lg:hidden flex items-center p-2 ml-2" id="mobile-menu-btn" aria-label="Toggle menu">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <!-- Nav Links -->
+        <div id="nav-links" class="flex gap-10 items-center text-lg font-medium text-black max-md:hidden">
+          <a href="index.html" class="hover:text-gray-600 transition-colors">Home</a>
+          <a href="store.html" class="hover:text-gray-600 transition-colors">Shop</a>
+          <a href="brands.html" class="hover:text-gray-600 transition-colors">Brands</a>
+          <a href="aboutUs.html" class="hover:text-gray-600 transition-colors">About Us</a>
+        </div>
+        <!-- Search Section -->
+        <div class="hidden md:flex gap-1 items-center text-lg font-medium text-black whitespace-nowrap w-64 max-w-full">
+          <input type="text" placeholder="Search here..." class="grow border-2 rounded-lg bg-transparent px-2 py-1" id="searchInput">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/448f43df596301c8cf70d566f00db3da0e3e5bb5?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[30px] cursor-pointer" alt="Search icon" onclick="performSearch()">
+        </div>
+        <!-- User Actions -->
+        <div class="hidden md:flex gap-6 items-center">
+          <a href="cart.html" class="relative text-[#517907] hover:text-black-700 transition-colors">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cdad125d772e016eb791453088c6421cdb46f10?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-8 aspect-square cursor-pointer" alt="Shopping cart">
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+          </a>
+          <a href="login.html">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab0c63d7033ea368662c8b3e2568b4b5472b06af?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-10 aspect-square cursor-pointer" alt="User account">
+          </a>
+        </div>
+        <!-- Mobile Drawer -->
+        <div id="mobile-nav" class="fixed inset-0 bg-black bg-opacity-60 z-40 hidden">
+          <div class="absolute right-0 top-0 h-full w-3/4 max-w-xs bg-white flex flex-col p-6">
+            <button id="close-mobile-nav" class="mb-6 ml-auto text-2xl">
+              &times;
+            </button>
+            <a href="index.html" class="mb-4 block text-lg font-medium hover:text-gray-600">Home</a>
+            <a href="store.html" class="mb-4 block text-lg font-medium hover:text-gray-600">Shop</a>
+            <a href="brands.html" class="mb-4 block text-lg font-medium hover:text-gray-600">Brands</a>
+            <a href="aboutUs.html" class="mb-4 block text-lg font-medium hover:text-gray-600">About Us</a>
+            <div class="flex gap-1 mt-6 mb-4">
+              <input type="text" placeholder="Search here..." class="grow border-2 rounded-lg bg-transparent px-2 py-1" id="mobileSearchInput">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/448f43df596301c8cf70d566f00db3da0e3e5bb5?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-8 aspect-square cursor-pointer" alt="Search icon" onclick="performSearchMobile()">
             </div>
-
-            <!-- Search Section -->
-            <div class="flex gap-1 self-stretch my-auto text-xl font-medium text-black whitespace-nowrap">
-                <input type="text" placeholder="Search here..." class="grow border-2 rounded-lg bg-transparent" id="searchInput">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/448f43df596301c8cf70d566f00db3da0e3e5bb5?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[30px] cursor-pointer" alt="Search icon" onclick="performSearch()">
+            <div class="flex gap-5">
+              <a href="cart.html" class="relative text-[#517907] hover:text-black-700 transition-colors">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cdad125d772e016eb791453088c6421cdb46f10?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-8 aspect-square cursor-pointer" alt="Shopping cart">
+                <span id="cart-count-mobile" class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+              </a>
+              <a href="login.html">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab0c63d7033ea368662c8b3e2568b4b5472b06af?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-10 aspect-square cursor-pointer" alt="User account">
+              </a>
             </div>
-
-            <!-- User Actions -->
-            <div class="flex gap-10 self-stretch">
-                <a href="cart.html" class="relative text-[#517907] hover:text-black-700 transition-colors m-9">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cdad125d772e016eb791453088c6421cdb46f10?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 my-auto w-10 aspect-square cursor-pointer" alt="Shopping cart">
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-6 h-6 flex items-center justify-center">0</span>
-                </a>
-                <a href="login.html"></a>
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab0c63d7033ea368662c8b3e2568b4b5472b06af?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[50px] cursor-pointer" alt="User account">
-                </a>
-            </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main class="flex flex-col items-stretch">
-        <section class="flex flex-col relative min-h-960 mt-10 w-full px-5 lg:px-20 py-25 lg:py-317 items-center font-gantari text-white font-semibold justify-center">
+      <section class="flex flex-col relative mt-10 w-full px-3 sm:px-5 lg:px-20 py-16 sm:py-24 lg:py-32 items-center font-gantari text-white font-semibold justify-center">
+        <div class="relative flex mb-0 lg:-mb-14 w-full max-w-3xl flex-col items-stretch">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl text-center m-0 text-black">About Us</h2>
+          <p class="text-base sm:text-2xl text-center mt-8 mb-0 text-black">
+            PlayVia is passionate about technology and driven by innovation. We
+            dream, we dare and we strive to create an effortless and joyful digital
+            life for everyone. We're always in search of incredible ideas and
+            experiences, and we aspire to deliver the incredible in everything we
+            do.
+          </p>
+        </div>
+      </section>
 
-            <div class="relative flex mb-0 lg:-mb-14 w-full max-w-901 flex-col items-stretch">
-                <h2 class="text-4xl text-center m-0 text-black">About Us</h2>
-                <p class="text-4xl text-center mt-8 mb-0 transform rotate-0.007526246097902828 text-black">
-                    PlayVia is passionate about technology and driven by innovation. We
-                    dream, we dare and we strive to create an effortless and joyful digital
-                    life for everyone. We're always in search of incredible ideas and
-                    experiences, and we aspire to deliver the incredible in everything we
-                    do.
-                </p>
-            </div>
-        </section>
+      <section class="flex flex-col items-center mt-8 sm:mt-11 lg:mt-24">
+        <h2 class="text-black text-2xl sm:text-3xl lg:text-4xl font-gantari font-medium m-0">Our Mission</h2>
+        <p class="text-black text-base sm:text-xl lg:text-2xl font-gantari font-medium text-center mt-7 sm:mt-11 lg:mt-12 mb-0 max-w-full lg:max-w-4xl px-4 sm:px-8 lg:px-0">
+          Our mission is simple: to create high-quality, high-performance gaming
+          accessories that give every gamer a competitive edge without breaking the
+          bank.<br />
+          We believe great gaming gear should be accessible to everyone. That's why we
+          focus on combining cutting-edge design, durable materials, and advanced
+          functionality all while keeping prices fair and transparent.<br />
+          We don't just make accessories. We make tools for domination, comfort, and
+          expression because your gear should feel like an extension of your game.
+        </p>
+      </section>
 
-        <section class="flex flex-col items-center mt-11 lg:mt-44">
-            <h2 class="text-black text-4xl font-gantari font-medium m-0">Our Mission</h2>
-            <p class="text-black text-2xl font-gantari font-medium text-center mt-11 lg:mt-44 mb-0 max-w-full lg:max-w-1200 px-5 lg:px-0">
-                Our mission is simple: to create high-quality, high-performance gaming
-                accessories that give every gamer a competitive edge without breaking the
-                bank.
-                <br />
-                We believe great gaming gear should be accessible to everyone. That's why we
-                focus on combining cutting-edge design, durable materials, and advanced
-                functionality all while keeping prices fair and transparent.
-                <br />
-                We don't just make accessories. We make tools for domination, comfort, and
-                expression because your gear should feel like an extension of your game.
-            </p>
-        </section>
-
-        <section class="flex flex-col items-center mt-11 lg:mt-44">
-            <h2 class="text-black text-4xl font-gantari font-medium m-0">Why Choose Us</h2>
-            <p class="text-black text-2xl font-gantari font-medium text-center mt-11 lg:mt-44 mb-0 max-w-full lg:max-w-1200 px-5 lg:px-0">
-                -Performance-Driven Design Every detail matters. From mechanical switches to
-                ergonomic shapes, our products are engineered for precision and comfort.
-                <br />
-                 -Community-Tested – We don't rely on labs alone. Our gear is tested by
-                real players, streamers, and esports enthusiasts before it ever hits the
-                shelves.
-                <br />
-                 -Built to Last We use premium materials that can handle serious play from
-                marathon sessions to high-stakes tournaments.
-                <br />
-                 -Gamer-Centric Support Questions, problems, or feedback? Our support team
-                speaks your language because they're gamers too.
-            </p>
-        </section>
+      <section class="flex flex-col items-center mt-8 sm:mt-11 lg:mt-24">
+        <h2 class="text-black text-2xl sm:text-3xl lg:text-4xl font-gantari font-medium m-0">Why Choose Us</h2>
+        <p class="text-black text-base sm:text-xl lg:text-2xl font-gantari font-medium text-center mt-7 sm:mt-11 lg:mt-12 mb-0 max-w-full lg:max-w-4xl px-4 sm:px-8 lg:px-0">
+          <span class="block mb-2">- Performance-Driven Design: Every detail matters. From mechanical switches to ergonomic shapes, our products are engineered for precision and comfort.</span>
+          <span class="block mb-2">- Community-Tested: We don't rely on labs alone. Our gear is tested by real players, streamers, and esports enthusiasts before it ever hits the shelves.</span>
+          <span class="block mb-2">- Built to Last: We use premium materials that can handle serious play from marathon sessions to high-stakes tournaments.</span>
+          <span class="block mb-2">- Gamer-Centric Support: Questions, problems, or feedback? Our support team speaks your language because they're gamers too.</span>
+        </p>
+      </section>
     </main>
 
     <!-- Footer Separator -->
-    <div class="w-full border-black border-solid border-[5px] min-h-[7px] mt-[689px] max-md:mt-10 max-md:max-w-full"></div>
+    <div class="w-full border-black border-solid border-[5px] min-h-[7px] mt-10 sm:mt-20"></div>
 
     <!-- Footer -->
-    <footer class="w-full max-w-[1198px] max-md:max-w-full mx-auto px-4">
-        <div class="flex gap-5 max-md:flex-col">
-            <!-- Company Info Section -->
-            <div class="w-[59%] max-md:ml-0 max-md:w-full">
-                <div class="grow max-md:mt-10 max-md:max-w-full">
-                    <div class="flex gap-5 max-md:flex-col">
-                        <!-- Logo -->
-                        <div class="w-[66%] max-md:ml-0 max-md:w-full">
-                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c255a6b7113439e99cdd02e042796819bea62a8?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain grow w-full aspect-[1.75] max-md:mt-10" alt="Playvia logo">
-                        </div>
-                        <!-- Information -->
-                        <div class="ml-5 w-[34%] max-md:ml-0 max-md:w-full">
-                            <div class="flex flex-col self-stretch my-auto font-semibold text-black max-md:mt-10">
-                                <h3 class="self-start text-2xl">
-                                    Information
-                                </h3>
-                                <div class="mt-6 text-xl">
-                                    <a href="#" class="block hover:text-gray-600 transition-colors">-About Us</a>
-                                    <a href="https://maps.app.goo.gl/hvTkZxwAXDn5FSGJ9" target="_blank" class="block hover:text-gray-600 transition-colors">-Address</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <footer class="w-full max-w-[1198px] mx-auto px-2 sm:px-4 mt-8">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-5">
+        <!-- Company Info Section -->
+        <div class="w-full md:w-[59%]">
+          <div class="flex flex-col md:flex-row gap-5">
+            <div class="w-full md:w-[66%] flex items-center md:items-start justify-center md:justify-start">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c255a6b7113439e99cdd02e042796819bea62a8?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-32 md:w-full aspect-[1.75]" alt="Playvia logo">
             </div>
-
-            <!-- Contact and Social Section -->
-            <div class="ml-5 w-[41%] max-md:ml-0 max-md:w-full">
-                <div class="flex gap-10 self-stretch my-auto max-md:mt-10">
-                    <!-- Contact Info -->
-                    <div class="flex flex-col font-semibold text-black">
-                        <h3 class="self-start text-2xl">
-                            Contact
-                        </h3>
-                        <div class="mt-6 text-xl">
-                            <a href="tel:011759486" class="block hover:text-gray-600 transition-colors">-Phone Number</a>
-                            <a href="mailto:tolarom27@gmail.com" class="block hover:text-gray-600 transition-colors">-Email</a>
-                        </div>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div class="flex flex-col self-start">
-                        <h3 class="text-2xl font-semibold text-black">
-                            Follow Us
-                        </h3>
-                        <div class="flex gap-5 self-end mt-4 max-md:mr-1.5">
-                            <a href="https://www.facebook.com/nachooloveu/" target="_blank" class="hover:opacity-70 transition-opacity">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2e0e44bf8c9a9c5deed4be334a8a526eee7a2c84?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[30px]" alt="Social media">
-                            </a>
-                            <a href="https://www.instagram.com/nachooloveu/" target="_blank" class="hover:opacity-70 transition-opacity">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/253c085ab80620631c8c8db041870e09ad0e6531?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain shrink-0 aspect-square w-[30px]" alt="Social media">
-                            </a>
-                        </div>
-                    </div>
+            <div class="w-full md:w-[34%] mt-6 md:mt-0">
+              <div class="flex flex-col font-semibold text-black">
+                <h3 class="text-lg md:text-2xl">Information</h3>
+                <div class="mt-3 md:mt-6 text-base md:text-xl">
+                  <a href="#" class="block hover:text-gray-600 transition-colors">-About Us</a>
+                  <a href="https://maps.app.goo.gl/hvTkZxwAXDn5FSGJ9" target="_blank" class="block hover:text-gray-600 transition-colors">-Address</a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+        <!-- Contact and Social Section -->
+        <div class="w-full md:w-[41%]">
+          <div class="flex flex-col md:flex-row gap-6 md:gap-10">
+            <!-- Contact Info -->
+            <div class="flex flex-col font-semibold text-black">
+              <h3 class="text-lg md:text-2xl">Contact</h3>
+              <div class="mt-3 md:mt-6 text-base md:text-xl">
+                <a href="tel:011759486" class="block hover:text-gray-600 transition-colors">-Phone Number</a>
+                <a href="mailto:tolarom27@gmail.com" class="block hover:text-gray-600 transition-colors">-Email</a>
+              </div>
+            </div>
+            <!-- Social Media -->
+            <div class="flex flex-col mt-4 md:mt-0">
+              <h3 class="text-lg md:text-2xl font-semibold text-black">Follow Us</h3>
+              <div class="flex gap-4 mt-2 md:mt-4">
+                <a href="https://www.facebook.com/nachooloveu/" target="_blank" class="hover:opacity-70 transition-opacity">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2e0e44bf8c9a9c5deed4be334a8a526eee7a2c84?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-7 aspect-square" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/nachooloveu/" target="_blank" class="hover:opacity-70 transition-opacity">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/253c085ab80620631c8c8db041870e09ad0e6531?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" class="object-contain w-7 aspect-square" alt="Instagram">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-</div>
-<script src="script.js"></script>
-
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -233,3 +233,28 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(document.getElementById('cart-items-container'), { childList: true, subtree: true });
     }
 });
+
+// Mobile nav toggle
+    document.getElementById('mobile-menu-btn').onclick = function() {
+      document.getElementById('mobile-nav').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+    document.getElementById('close-mobile-nav').onclick = function() {
+      document.getElementById('mobile-nav').style.display = 'none';
+      document.body.style.overflow = '';
+    };
+    // Optional: Close mobile nav on backdrop click
+    document.getElementById('mobile-nav').onclick = function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    };
+    // Mobile search handler
+    function performSearchMobile() {
+      const input = document.getElementById('mobileSearchInput');
+      if (input && input.value.trim()) {
+        // Implement mobile search logic here
+        alert('Search: ' + input.value.trim());
+      }
+    }
