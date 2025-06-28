@@ -90,161 +90,133 @@
       </nav>
     </header>
 
+    <div class="flex justify-start px-20 pt-8 max-md:px-10 max-sm:px-5">
+        <button onclick="window.history.back()" class="flex items-center gap-2 text-lg font-semibold text-gray-700 hover:text-black transition-colors bg-gray-200 hover:bg-gray-300 rounded px-4 py-2 shadow">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+    </div>
+
     <main class="px-20 pt-32 pb-24 max-md:px-10 max-md:pt-20 max-md:pb-16 max-sm:px-5 max-sm:py-10">
         <!-- controller-->
         <div class="item controller">
-            <section class="mb-24 max-sm:mb-16">
-                <div class="flex justify-between items-center mb-16 max-md:flex-col max-md:gap-5 max-md:items-start">
-                    <h2 class="text-4xl font-bold text-stone-900 max-sm:text-3xl">Controller</h2>
-                </div>
-                <div class="grid gap-32 justify-start grid-cols-[repeat(3,350px)] max-md:gap-10 max-md:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:gap-8 max-sm:grid-cols-[1fr] justify-self-center">
-                    <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/98d3683e145884b77e3fb54773a8d406137dbfe6?placeholderIfAbsent=true" alt="controller" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                        <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Xbox Wireless Controller</h3>
-                        <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$64.99</p>
-                        <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" 
-                    data-item-id="Xbox Wireless Controller"
-                    data-item-name="Xbox Wireless Controller"
-                    data-item-price="64.99"
-                    data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/98d3683e145884b77e3fb54773a8d406137dbfe6?placeholderIfAbsent=true"
-                    onclick="addToCartFromProductPage(this)">Add to Cart</button>
-                    </article>
-                    <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/288104033a189618d73ebedeadd780070ede8728?placeholderIfAbsent=true" alt="Xbox Wireless controller" class="object-contain absolute top-1.5 w-64 h-[215px] left-[47px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                        <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Xbox Wireless Controller + USB-C® Cable</h3>
-                        <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$64.99</p>
-                        <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                            data-item-id="Xbox Wireless Controller + USB-C® Cable"
-                            data-item-name="Xbox Wireless Controller + USB-C® Cable"
-                            data-item-price="64.99"
-                            data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/288104033a189618d73ebedeadd780070ede8728?placeholderIfAbsent=true"
-                            onclick="addToCartFromProductPage(this)">Add to Cart</button>
-                    </article>
-                    <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/36087343c97e506ee546bc2dbc4a7947747ccce8?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                        <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Wolverine V3 Pro</h3>
-                        <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$199.99</p>
-                            <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                                data-item-id="Razer Wolverine V3 Pro"
-                                data-item-name="Razer Wolverine V3 Pro"
-                                data-item-price="199.99"
-                                data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/36087343c97e506ee546bc2dbc4a7947747ccce8?placeholderIfAbsent=true"
-                                onclick="addToCartFromProductPage(this)">Add to Cart</button>
-                    </article>
-                </div>
-            </section>
+            <section class="mb-16 sm:mb-20">
+            <div class="flex justify-between items-center mb-8 sm:mb-16 flex-col sm:flex-row gap-5 sm:gap-0">
+                <h2 class="text-2xl sm:text-4xl font-bold text-stone-900">Controller</h2>
+            </div>
+            <div class="grid gap-6 sm:gap-12 md:gap-20 lg:gap-32 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
+                <!-- Product Cards (repeat for each as before) -->
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/98d3683e145884b77e3fb54773a8d406137dbfe6?placeholderIfAbsent=true" alt="controller" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Xbox Wireless Controller</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$64.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" 
+                        data-item-id="Xbox Wireless Controller"
+                        data-item-name="Xbox Wireless Controller"
+                        data-item-price="64.99"
+                        data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/98d3683e145884b77e3fb54773a8d406137dbfe6?placeholderIfAbsent=true"
+                        onclick="addToCartFromProductPage(this)">Add to Cart</button>
+                </article>
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/288104033a189618d73ebedeadd780070ede8728?placeholderIfAbsent=true" alt="Xbox Wireless controller" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Xbox Wireless Controller+USB</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$64.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                        data-item-id="Xbox Wireless Controller + USB-C® Cable"
+                        data-item-name="Xbox Wireless Controller + USB-C® Cable"
+                        data-item-price="64.99"
+                        data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/288104033a189618d73ebedeadd780070ede8728?placeholderIfAbsent=true"
+                        onclick="addToCartFromProductPage(this)">Add to Cart</button>
+                </article>
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/36087343c97e506ee546bc2dbc4a7947747ccce8?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Wolverine V3 Pro</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$199.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                        data-item-id="Razer Wolverine V3 Pro"
+                        data-item-name="Razer Wolverine V3 Pro"
+                        data-item-price="199.99"
+                        data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/36087343c97e506ee546bc2dbc4a7947747ccce8?placeholderIfAbsent=true"
+                        onclick="addToCartFromProductPage(this)">Add to Cart</button>
+                </article>
+            </div>
+        </section>
 
-            <section class="mb-24 max-sm:mb-16">
-                <div class="grid gap-32 justify-start grid-cols-[repeat(3,350px)] max-md:gap-10 max-md:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:gap-8 max-sm:grid-cols-[1fr] justify-self-center">
-                    <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/880d089854e2e7e1f14eccf5ee6c713d634281aa?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" alt="controller" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                        <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Wolverine V3 Tournament Edition</h3>
-                        <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$64.99</p>
-                        <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                            data-item-id="Razer Wolverine V3 Tournament Edition"
-                            data-item-name="Razer Wolverine V3 Tournament Edition"
-                            data-item-price="64.99"
-                            data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/880d089854e2e7e1f14eccf5ee6c713d634281aa?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea"
-                            onclick="addToCartFromProductPage(this)">Add to Cart</button>
-                    </article>
-                    <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/58d019a1d9226c71732b7a3174a425b3b12c6a71?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" alt="Xbox Wireless controller" class="object-contain absolute top-1.5 w-64 h-[215px] left-[47px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                        <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Wolverine V2 Pro</h3>
-                        <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$64.99</p>
-                        <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                            data-item-id="Razer Wolverine V2 Pro"
-                            data-item-name="Razer Wolverine V2 Pro"
-                            data-item-price="64.99"
-                            data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/58d019a1d9226c71732b7a3174a425b3b12c6a71?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea"
-                            onclick="addToCartFromProductPage(this)">Add to Cart</button>
-                    </article>
-                    <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ff26b25c766f5845921d5e709f76755c6fbe206?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                        <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Xbox Wireless Controller – DOOM Edition</h3>
-                        <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$199.99</p>
-                            <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                                data-item-id="Xbox Wireless Controller – DOOM Edition"
-                                data-item-name="Xbox Wireless Controller – DOOM Edition"
-                                data-item-price="199.99"
-                                data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/6ff26b25c766f5845921d5e709f76755c6fbe206?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea"
-                                onclick="addToCartFromProductPage(this)">Add to Cart</button>
-                    </article>
-                </div>
-            </section>
-
-            <section class="mb-24 max-sm:mb-16">
-                <div class="grid gap-32 justify-start grid-cols-[repeat(3,350px)] max-md:gap-10 max-md:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:gap-8 max-sm:grid-cols-[1fr] justify-self-center">
-                    <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d44c42f2f40a0ca85cc9c46a559bd051258289ef?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" alt="controller" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                        <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Xbox Wireless Controller Nocturnal Vapor Special Edition</h3>
-                        <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$64.99</p>
-                            <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                                data-item-id="Xbox Wireless Controller Nocturnal Vapor Special Edition"
-                                data-item-name="Xbox Wireless Controller Nocturnal Vapor Special Edition"
-                                data-item-price="64.99"
-                                data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/d44c42f2f40a0ca85cc9c46a559bd051258289ef?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea"
-                                onclick="addToCartFromProductPage(this)">Add to Cart</button>
-                    </article>
-                    <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/58d019a1d9226c71732b7a3174a425b3b12c6a71?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" alt="Xbox Wireless controller" class="object-contain absolute top-1.5 w-64 h-[215px] left-[47px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                        <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Wolverine V2 Pro</h3>
-                        <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$64.99</p>
-                        <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                            data-item-id="Razer Wolverine V2 Pro"
-                            data-item-name="Razer Wolverine V2 Pro"
-                            data-item-price="64.99"
-                            data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/58d019a1d9226c71732b7a3174a425b3b12c6a71?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea"
-                            onclick="addToCartFromProductPage(this)">Add to Cart</button>
-                    </article>
-                    <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/674d117bd589fc666d8ef6cd708cff4845c9eb60?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                        <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">DualSense® wireless controller Chroma Teal</h3>
-                        <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$199.99</p>
-                            <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                                data-item-id="DualSense® wireless controller Chroma Teal"
-                                data-item-name="DualSense® wireless controller Chroma Teal"
-                                data-item-price="199.99"
-                                data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/674d117bd589fc666d8ef6cd708cff4845c9eb60?placeholderIfAbsent=true&apiKey=ac6e8c29eb8b458f98659f6d54bcc9ea"
-                                onclick="addToCartFromProductPage(this)">Add to Cart</button>
-                    </article>
-                </div>
-            </section>
+        <section class="mb-16 sm:mb-20">
+            <div class="grid gap-6 sm:gap-12 md:gap-20 lg:gap-32 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
+                <!-- Product Cards (repeat for each as before) -->
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/98d3683e145884b77e3fb54773a8d406137dbfe6?placeholderIfAbsent=true" alt="controller" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Xbox Wireless Controller</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$64.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" 
+                        data-item-id="Xbox Wireless Controller"
+                        data-item-name="Xbox Wireless Controller"
+                        data-item-price="64.99"
+                        data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/98d3683e145884b77e3fb54773a8d406137dbfe6?placeholderIfAbsent=true"
+                        onclick="addToCartFromProductPage(this)">Add to Cart</button>
+                </article>
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/288104033a189618d73ebedeadd780070ede8728?placeholderIfAbsent=true" alt="Xbox Wireless controller" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Xbox Wireless Controller+USB</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$64.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                        data-item-id="Xbox Wireless Controller + USB-C® Cable"
+                        data-item-name="Xbox Wireless Controller + USB-C® Cable"
+                        data-item-price="64.99"
+                        data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/288104033a189618d73ebedeadd780070ede8728?placeholderIfAbsent=true"
+                        onclick="addToCartFromProductPage(this)">Add to Cart</button>
+                </article>
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/36087343c97e506ee546bc2dbc4a7947747ccce8?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Wolverine V3 Pro</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$199.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                        data-item-id="Razer Wolverine V3 Pro"
+                        data-item-name="Razer Wolverine V3 Pro"
+                        data-item-price="199.99"
+                        data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/36087343c97e506ee546bc2dbc4a7947747ccce8?placeholderIfAbsent=true"
+                        onclick="addToCartFromProductPage(this)">Add to Cart</button>
+                </article>
+            </div>
+        </section>
         </div>
     
         <!--console-->
         <div class="item console">
-            <section class="mb-24 max-sm:mb-16">
-            <div class="flex justify-between items-center mb-16 max-md:flex-col max-md:gap-5 max-md:items-start">
-                <h2 class="text-4xl font-bold text-stone-900 max-sm:text-3xl">Console</h2>
+            <section class="mb-16 sm:mb-20">
+            <div class="flex justify-between items-center mb-8 sm:mb-16 flex-col sm:flex-row gap-5 sm:gap-0">
+                <h2 class="text-2xl sm:text-4xl font-bold text-stone-900">Console</h2>
             </div>
-            <div class="grid gap-32 justify-start grid-cols-[repeat(3,350px)] max-md:gap-10 max-md:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:gap-8 max-sm:grid-cols-[1fr] justify-self-center">
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b8cb34d9cd2fc4316cb611b762f8c37d7d67a85?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">PlayStation®5</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$499.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            <div class="grid gap-6 sm:gap-12 md:gap-20 lg:gap-32 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b8cb34d9cd2fc4316cb611b762f8c37d7d67a85?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">PlayStation®5</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$499.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="PlayStation®5"
                         data-item-name="PlayStation®5"
                         data-item-price="499.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/7b8cb34d9cd2fc4316cb611b762f8c37d7d67a85?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aa570d752d0202d84f87e52dad277b7cdd2ad4c?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-1.5 h-[221px] left-[53px] w-[244px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Xbox Series X</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$599.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aa570d752d0202d84f87e52dad277b7cdd2ad4c?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Xbox Series X</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$599.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Xbox Series X"
                         data-item-name="Xbox Series X"
                         data-item-price="599.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/1aa570d752d0202d84f87e52dad277b7cdd2ad4c?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e514b3b15c0a8fe9b3e2648346a9ba81c797fb5?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">PlayStation 4</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$299.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e514b3b15c0a8fe9b3e2648346a9ba81c797fb5?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">PlayStation 4</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$299.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="PlayStation 4"
                         data-item-name="PlayStation 4"
                         data-item-price="299.99"
@@ -254,35 +226,35 @@
             </div>
         </section>
 
-        <section class="mb-24 max-sm:mb-16">
-            <div class="grid gap-32 justify-start grid-cols-[repeat(3,350px)] max-md:gap-10 max-md:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:gap-8 max-sm:grid-cols-[1fr] justify-self-center">
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b8cb34d9cd2fc4316cb611b762f8c37d7d67a85?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">PlayStation®5</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$499.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        <section class="mb-16 sm:mb-20">
+            <div class="grid gap-6 sm:gap-12 md:gap-20 lg:gap-32 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7b8cb34d9cd2fc4316cb611b762f8c37d7d67a85?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">PlayStation®5</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$499.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="PlayStation®5"
                         data-item-name="PlayStation®5"
                         data-item-price="499.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/7b8cb34d9cd2fc4316cb611b762f8c37d7d67a85?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aa570d752d0202d84f87e52dad277b7cdd2ad4c?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-1.5 h-[221px] left-[53px] w-[244px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Xbox Series X</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$599.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aa570d752d0202d84f87e52dad277b7cdd2ad4c?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Xbox Series X</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$599.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Xbox Series X"
                         data-item-name="Xbox Series X"
                         data-item-price="599.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/1aa570d752d0202d84f87e52dad277b7cdd2ad4c?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e514b3b15c0a8fe9b3e2648346a9ba81c797fb5?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">PlayStation 4</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$299.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e514b3b15c0a8fe9b3e2648346a9ba81c797fb5?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">PlayStation 4</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$299.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="PlayStation 4"
                         data-item-name="PlayStation 4"
                         data-item-price="299.99"
@@ -291,42 +263,41 @@
                 </article>
             </div>
         </section>
-
         </div>
         <!--mouse-->
         <div class="item Mouse">
-            <section class="mb-24 max-sm:mb-16">
-            <div class="flex justify-between items-center mb-16 max-md:flex-col max-md:gap-5 max-md:items-start">
-                <h2 class="text-4xl font-bold text-stone-900 max-sm:text-3xl">Mouse</h2>
+            <section class="mb-16 sm:mb-20">
+            <div class="flex justify-between items-center mb-8 sm:mb-16 flex-col sm:flex-row gap-5 sm:gap-0">
+                <h2 class="text-2xl sm:text-4xl font-bold text-stone-900">Mouse</h2>
             </div>
-            <div class="grid gap-32 justify-start grid-cols-[repeat(3,350px)] max-md:gap-10 max-md:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:gap-8 max-sm:grid-cols-[1fr] justify-self-center">
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ef07338eafcfc39a93eda0a81ca14586e864b7c?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-1.5 h-[221px] left-[53px] w-[244px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Basilisk V3 Pro 35K</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$159.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            <div class="grid gap-6 sm:gap-12 md:gap-20 lg:gap-32 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ef07338eafcfc39a93eda0a81ca14586e864b7c?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Basilisk V3 Pro 35K</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$159.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Razer Basilisk V3 Pro 35K"
                         data-item-name="Razer Basilisk V3 Pro 35K"
                         data-item-price="159.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/4ef07338eafcfc39a93eda0a81ca14586e864b7c?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a4d9f41260a80aed95244fa1516e1d376d5d6a8?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[221px] left-[61px] w-[227px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">ASUS Fragrance Mouse MD101</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$49.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a4d9f41260a80aed95244fa1516e1d376d5d6a8?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">ASUS Fragrance Mouse MD101</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$49.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="ASUS Fragrance Mouse MD101"
                         data-item-name="ASUS Fragrance Mouse MD101"
                         data-item-price="49.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/5a4d9f41260a80aed95244fa1516e1d376d5d6a8?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7abb5d9eab323c078fb717c935ef195c25ee140?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[221px] left-[41px] w-[267px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Viper V3 HyperSpeed</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$69.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7abb5d9eab323c078fb717c935ef195c25ee140?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Viper V3 HyperSpeed</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$69.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Razer Viper V3 HyperSpeed"
                         data-item-name="Razer Viper V3 HyperSpeed"
                         data-item-price="69.99"
@@ -336,35 +307,35 @@
             </div>
         </section>
 
-        <section class="mb-24 max-sm:mb-16">
-            <div class="grid gap-32 justify-start grid-cols-[repeat(3,350px)] max-md:gap-10 max-md:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:gap-8 max-sm:grid-cols-[1fr] justify-self-center">
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ef07338eafcfc39a93eda0a81ca14586e864b7c?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-1.5 h-[221px] left-[53px] w-[244px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Basilisk V3 Pro 35K</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$159.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        <section class="mb-16 sm:mb-20">
+            <div class="grid gap-6 sm:gap-12 md:gap-20 lg:gap-32 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ef07338eafcfc39a93eda0a81ca14586e864b7c?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Basilisk V3 Pro 35K</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$159.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Razer Basilisk V3 Pro 35K"
                         data-item-name="Razer Basilisk V3 Pro 35K"
                         data-item-price="159.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/4ef07338eafcfc39a93eda0a81ca14586e864b7c?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a4d9f41260a80aed95244fa1516e1d376d5d6a8?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[221px] left-[61px] w-[227px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">ASUS Fragrance Mouse MD101</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$49.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a4d9f41260a80aed95244fa1516e1d376d5d6a8?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">ASUS Fragrance Mouse MD101</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$49.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="ASUS Fragrance Mouse MD101"
                         data-item-name="ASUS Fragrance Mouse MD101"
                         data-item-price="49.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/5a4d9f41260a80aed95244fa1516e1d376d5d6a8?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7abb5d9eab323c078fb717c935ef195c25ee140?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[221px] left-[41px] w-[267px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Viper V3 HyperSpeed</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$69.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7abb5d9eab323c078fb717c935ef195c25ee140?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Viper V3 HyperSpeed</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$69.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Razer Viper V3 HyperSpeed"
                         data-item-name="Razer Viper V3 HyperSpeed"
                         data-item-price="69.99"
@@ -376,38 +347,38 @@
         </div>
         <!--Headset-->
         <div class="item headset">
-            <section class="mb-24 max-sm:mb-16">
-            <div class="flex justify-between items-center mb-16 max-md:flex-col max-md:gap-5 max-md:items-start">
-                <h2 class="text-4xl font-bold text-stone-900 max-sm:text-3xl">Headset</h2>
+            <section class="mb-16 sm:mb-20">
+            <div class="flex justify-between items-center mb-8 sm:mb-16 flex-col sm:flex-row gap-5 sm:gap-0">
+                <h2 class="text-2xl sm:text-4xl font-bold text-stone-900">Headset</h2>
             </div>
-            <div class="grid gap-32 justify-start grid-cols-[repeat(3,350px)] max-md:gap-10 max-md:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:gap-8 max-sm:grid-cols-[1fr] justify-self-center">
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f3305e7867bef6b2f3f6bf5ecfd517ae3d503ac?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-1.5 h-[201px] left-[74px] w-[201px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Xbox Stereo Headset</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$64.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            <div class="grid gap-6 sm:gap-12 md:gap-20 lg:gap-32 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f3305e7867bef6b2f3f6bf5ecfd517ae3d503ac?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Xbox Stereo Headset</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$64.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Xbox Stereo Headset"
                         data-item-name="Xbox Stereo Headset"
                         data-item-price="64.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/5f3305e7867bef6b2f3f6bf5ecfd517ae3d503ac?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07d5b5fcab612da2917d427f2f1d6e99e179d234?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Barracuda X Chroma</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$129.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07d5b5fcab612da2917d427f2f1d6e99e179d234?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Barracuda X Chroma</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$129.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Razer Barracuda X Chroma"
                         data-item-name="Razer Barracuda X Chroma"
                         data-item-price="129.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/07d5b5fcab612da2917d427f2f1d6e99e179d234?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/10d310d208ee1c66062be688569b7b666e087955?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Barracuda Pro</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$249.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/10d310d208ee1c66062be688569b7b666e087955?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Barracuda Pro</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$249.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Razer Barracuda Pro"
                         data-item-name="Razer Barracuda Pro"
                         data-item-price="249.99"
@@ -417,35 +388,35 @@
             </div>
         </section>
 
-        <section class="mb-24 max-sm:mb-16">
-            <div class="grid gap-32 justify-start grid-cols-[repeat(3,350px)] max-md:gap-10 max-md:justify-center max-md:grid-cols-[repeat(2,1fr)] max-sm:gap-8 max-sm:grid-cols-[1fr] justify-self-center">
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f3305e7867bef6b2f3f6bf5ecfd517ae3d503ac?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-1.5 h-[201px] left-[74px] w-[201px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Xbox Stereo Headset</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$64.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        <section class="mb-16 sm:mb-20">
+            <div class="grid gap-6 sm:gap-12 md:gap-20 lg:gap-32 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f3305e7867bef6b2f3f6bf5ecfd517ae3d503ac?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Xbox Stereo Headset</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$64.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Xbox Stereo Headset"
                         data-item-name="Xbox Stereo Headset"
                         data-item-price="64.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/5f3305e7867bef6b2f3f6bf5ecfd517ae3d503ac?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07d5b5fcab612da2917d427f2f1d6e99e179d234?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Barracuda X Chroma</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$129.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07d5b5fcab612da2917d427f2f1d6e99e179d234?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Barracuda X Chroma</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$129.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Razer Barracuda X Chroma"
                         data-item-name="Razer Barracuda X Chroma"
                         data-item-price="129.99"
                         data-item-image="https://cdn.builder.io/api/v1/image/assets/TEMP/07d5b5fcab612da2917d427f2f1d6e99e179d234?placeholderIfAbsent=true"
                         onclick="addToCartFromProductPage(this)">Add to Cart</button>
                 </article>
-                <article class="relative bg-zinc-300 bg-opacity-0 h-[400px] w-[350px] max-md:mx-auto max-md:my-0 max-md:w-full max-md:max-w-[350px] max-sm:mx-auto max-sm:my-0 max-sm:w-full max-sm:h-[350px] max-sm:max-w-[300px]">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/10d310d208ee1c66062be688569b7b666e087955?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[207px] left-[29px] w-[292px] max-sm:object-contain max-sm:top-0 max-sm:w-60 max-sm:h-[170px] max-sm:left-[30px]">
-                    <h3 class="absolute text-3xl font-bold text-black left-[39px] top-[221px] w-[272px] max-sm:text-2xl max-sm:top-[180px] max-sm:w-[260px]">Razer Barracuda Pro</h3>
-                    <p class="absolute text-3xl font-bold text-black left-[39px] top-[335px] max-sm:text-2xl max-sm:top-[280px]">$249.99</p>
-                    <button class="absolute text-3xl font-bold text-black left-[39px] top-[380px] max-sm:text-2xl max-sm:top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                <article class="relative bg-zinc-300 bg-opacity-0 h-[350px] w-full max-w-xs mx-auto">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/10d310d208ee1c66062be688569b7b666e087955?placeholderIfAbsent=true" alt="image" class="object-contain absolute top-0 h-[170px] left-1/2 -translate-x-1/2 w-60">
+                    <h3 class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[180px] w-[80%]">Razer Barracuda Pro</h3>
+                    <p class="absolute text-xl sm:text-2xl md:text-3xl font-bold text-black left-4 top-[260px]">$249.99</p>
+                    <button class="absolute text-base sm:text-xl md:text-2xl font-bold left-4 top-[300px] bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                         data-item-id="Razer Barracuda Pro"
                         data-item-name="Razer Barracuda Pro"
                         data-item-price="249.99"
